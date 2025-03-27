@@ -1,0 +1,41 @@
+[
+  {
+    "first_name": "Senku",
+    "last_name": "Ishigami",
+    "race": "1",
+    "date_of_birth": "2004-01-04",
+    "gender": "1",
+    "height": "171.4",
+    "weight": "61.0",
+    "hair_color": "White with Dark Green Tips",
+    "eye_color": "Red",
+    "blood_type": "1",
+    "nationality": "1"
+  },
+  {
+    "first_name": "Taiju",
+    "last_name": "Oki",
+    "race": "1",
+    "date_of_birth": "2003-04-02",
+    "gender": "1",
+    "height": "189.0",
+    "weight": "95.0",
+    "hair_color": "Brown",
+    "eye_color": "Brown",
+    "blood_type": "3",
+    "nationality": "1"
+  },
+  {
+    "first_name": "Ruri",
+    "last_name": "",
+    "race": "1",
+    "date_of_birth": "5721-04-14",
+    "gender": "2",
+    "height": "160.0",
+    "weight": "51.0",
+    "hair_color": "Blonde",
+    "eye_color": "Teal",
+    "blood_type": "4",
+    "nationality": "1"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "chart": "M",
+    "descriptive": "Male"
+  },
+  {
+    "chart": "F",
+    "descriptive": "Female"
+  }
+]
