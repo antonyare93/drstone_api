@@ -15,8 +15,8 @@ engine = create_engine(db_url, echo=False)
 
 
 def migrate_data():
-    files = ['gender', 'race', 'nationality', 'blood_type', 'character']
-    Classes = {'gender': Gender, 'race': Race, 'nationality': Nationality, 'blood_type': BloodType, 'character': Character}
+    files = ['gender', 'race', 'country', 'place', 'blood_type', 'character']
+    Classes = {'gender': Gender, 'race': Race, 'country': Country, 'place': Place, 'blood_type': BloodType, 'character': Character}
 
     for file in files:
         with open(f'./json_files/{file}.json', 'r') as f:
@@ -65,7 +65,7 @@ def csv_to_json(csv_file_path, json_file_path=None):
 # Example usage
 if __name__ == "__main__":
 
-    files = ['gender', 'race', 'nationality', 'blood_type', 'character']
+    files = ['gender', 'race', 'country', 'place', 'blood_type', 'character']
     # Convert CSV to JSON and save to a file
     for file in files:
         csv_to_json(f'{file}.csv', f'./json_files/{file}.json')

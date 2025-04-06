@@ -14,7 +14,7 @@ class Character(SQLModel, table=True):
     hair_color: str = Field(nullable=False, max_length=200)
     eye_color: str = Field(nullable=False, max_length=10)
     blood_type: int = Field(nullable=False, foreign_key='blood_type.id')
-    nationality: int = Field(nullable=False, foreign_key='nationality.id')
+    birth_place: int = Field(nullable=False, foreign_key='place.id')
 
 
 class Gender(SQLModel, table=True):
@@ -30,8 +30,15 @@ class BloodType(SQLModel, table=True):
     b_type: str = Field(nullable=False, max_length=3)
 
 
-class Nationality(SQLModel, table=True):
-    __tablename__ = 'nationality'
+class Place(SQLModel, table=True):
+    __tablename__ = 'place'
+    id: int | None = Field(default=None, primary_key=True)
+    name: str = Field(nullable=False, max_length=50)
+    country: int = Field(nullable=False, foreign_key='country.id')
+
+
+class Country(SQLModel, table=True):
+    __tablename__ = 'country'
     id: int | None = Field(default=None, primary_key=True)
     citizenship: str = Field(nullable=False, max_length=20)
     country: str = Field(nullable=False, max_length=20)

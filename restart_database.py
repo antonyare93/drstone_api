@@ -10,7 +10,7 @@ db_url = os.getenv('SUPABASE_URL') + os.getenv('SUPABASE_PW') + os.getenv('SUPAB
 engine = create_engine(db_url, echo=False)
 
 
-drop = True
+drop = False # True if need to drop tables and create them again; False to skip dropping
 if drop:
     SQLModel.metadata.drop_all(engine)
 SQLModel.metadata.create_all(engine)
