@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - main  # Se ejecuta solo en pushes (incluyendo merges) a la rama 'main'
+    paths:
+      - 'migrations/**'  #Ejecuta SOLO si cambian archivos DENTRO de la carpeta 'migrations'
 
 # Define los trabajos (jobs) que se ejecutarán
 jobs:
