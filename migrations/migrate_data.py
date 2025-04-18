@@ -68,6 +68,6 @@ if __name__ == "__main__":
     files = ['gender', 'race', 'country', 'place', 'blood_type', 'character']
     # Convert CSV to JSON and save to a file
     for file in files:
-        csv_to_json(f'{file}.csv', f'./json_files/{file}.json')
+        csv_to_json(f'./migrations/{file}.csv', f'./migrations/json_files/{file}.json')
 
     migrate_data()
