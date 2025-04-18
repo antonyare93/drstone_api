@@ -10,6 +10,7 @@ from sqlalchemy import inspect
 load_dotenv()
 
 db_url = os.getenv('SUPABASE_URL') + os.getenv('SUPABASE_PW') + os.getenv('SUPABASE_PATH')
+FILES_PATH = os.getenv('FILES_PATH')
 
 engine = create_engine(db_url, echo=False)
 
@@ -19,7 +20,7 @@ def migrate_data():
     Classes = {'gender': Gender, 'race': Race, 'country': Country, 'place': Place, 'blood_type': BloodType, 'character': Character}
 
     for file in files:
-        with open(f'./json_files/{file}.json', 'r') as f:
+        with open(f'{FILES_PATH}/json_files/{file}.json', 'r') as f:
             data = json.load(f)
 
         with Session(engine) as session:
@@ -68,6 +69,6 @@ if __name__ == "__main__":
     files = ['gender', 'race', 'country', 'place', 'blood_type', 'character']
     # Convert CSV to JSON and save to a file
     for file in files:
-        csv_to_json(f'./migrations/{file}.csv', f'./migrations/json_files/{file}.json')
+        csv_to_json(f'{FILES_PATH}/{file}.csv', f'{FILES_PATH}/json_files/{file}.json')
 
     migrate_data()
