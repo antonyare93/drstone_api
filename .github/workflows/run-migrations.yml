@@ -40,6 +40,7 @@ jobs:
         # Añade aquí las variables de entorno que tu script necesite, usando secrets si es necesario
         env:
           PYTHONPATH: ${{ github.workspace }}
+          FILES_PATH: ${{ secrets.FILES_PATH }}
           SUPABASE_PATH: ${{ secrets.SUPABASE_PATH }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_PW: ${{ secrets.SUPABASE_PW }}
